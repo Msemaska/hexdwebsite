@@ -27,3 +27,20 @@ document.getElementById('contactForm').addEventListener('submit', async function
         alert('Failed to submit the form. Please try again.');
     }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.navLinks');
+
+    navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active'); // This should toggle the visibility
+    });
+});
+
+
+
+
+
+

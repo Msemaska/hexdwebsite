@@ -3,6 +3,7 @@
     padding:0;
     border:0;
     box-sizing: border-box;
+    
 }
 
 
@@ -15,6 +16,7 @@ body{
     justify-content: center;
     font-family:'Inter',sans-serif;
     gap: 100px;
+    overflow-x:hidden;
 }
 
 .material-symbols-outlined{
@@ -38,6 +40,27 @@ body{
     position:relative;
     padding: 12px 24px;
 }
+
+.nav-toggle {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: black;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+    z-index:9999;
+}
+.heroSection{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    gap:50px;
+    
+}
+
+
 .logoContainer{
     width: 146px;
     height:auto;
@@ -57,7 +80,7 @@ body{
     text-shadow: 0 0 0px rgba(160, 224, 13, 0.8); /* Enhanced glow on hover */
 }
 
-.button{
+.button,.buttonContact{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -98,18 +121,9 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
 }
 
-.button1:hover {
+.button1:hover,.buttonContact:hover {
     background-color: white; /* Change background color to white on hover */
     color: black; /* Change text color to black on hover */
-}
-
-
-
-
-
-.dropdown {
-    position: relative;
-    display: inline-block;
 }
 
 .dropdown-content {
@@ -132,40 +146,51 @@ body{
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
 .section{
     display:flex;
     flex-direction: row;
     max-width: 1200px;
-    
+    width: 100%;
 }
 .section-row{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    width:100%;
 }
 
 .section-column{
     display:flex;
     flex-direction: column;
-    flex:1;
+    
     gap:24px;
+    width:100%;
 }
 .container{
     display:flex;
+    width:100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex:1;
-    padding: 20px;
+   
     overflow: hidden;
 }
 .video-container{
-    width: 500px;
-    height: 500px;
-    max-width: 100%;
-    max-height: 100%;
+    
+    max-width: 500px;
+    max-height: 500px;
     overflow: hidden;
+    
 }
 .video-container video {
     width:100%;
@@ -184,19 +209,19 @@ body{
     display:grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows:repeat(2,1fr);
+    
 
     gap:20px;
-    padding:20px;
+    padding:0 20px;
 
 }
 .grid-content{
     width:100%;
     gap:10px;
-    padding:20px 60px;
+    padding:20px 40px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items:;
     background-color: #131412   ;
     border-radius: 20px;
     
@@ -244,6 +269,7 @@ body{
     font-weight: 50;
     line-height: 1.2em;
     letter-spacing: 1.6px;
+    text-align: center;
 
 }
 .h3{
@@ -433,7 +459,6 @@ body{
     align-items: center;
     width:100%;
     position:relative;
-    height:800px;
     overflow:hidden;
     white-space: nowrap;
 }
@@ -522,17 +547,7 @@ body{
 
 
 
-.marketingTickerCardboxTitle{
-    font-size:30px;
-}
-.marketingTickerCardboxText{
-    margin:0px 100px;
-}
-.marketingTickerCardbox{
-    width:1fr;
-    display:flex;
-    flex-direction: column;
-}
+
 
 .marketingTicker{
     overflow:hidden;
@@ -543,7 +558,7 @@ body{
 }
 
 .marketingTickerCardsContainer{
-    white-space: nowrap;
+    
     display:flex;
     flex-direction:row;
     overflow:hidden;
@@ -577,13 +592,29 @@ body{
 .marketingTickerCards{
     animation:marketingScroll 25s linear infinite;
     display:flex;
-    flex:1;
-    will-change: transform;
-    
-    
+    align-items: center;
+    justify-content: center;
+    width:100%;   
+}
+.marketingTickerCardboxTitle{
+    font-size:30px;
+    display:flex;
+
+}
+.marketingTickerCardboxText{
+    margin:0px 0px;
+    display:flex;
+    flex-direction: column;
     
 }
-
+.marketingTickerCardbox{
+    display:block;
+    margin: 0px 30px;
+    width:200px;
+    padding: 10px;
+    border:1px solid grey;
+    border-radius: 10px;
+}
 @keyframes marketingScroll{
     0%{
         transform:translateX(0%)
@@ -736,6 +767,7 @@ form {
     background:#131412;
     border-radius:50px;
     width:800px;
+    padding:20px;
 }
 .contactFormTitle{
     display:flex;
@@ -803,4 +835,210 @@ form {
 .footerlink:hover{
     color: #A0E00D;
     text-shadow: 0 0 0px rgba(160, 224, 13, 0.8); /* Enhanced glow on hover */
+}
+.aboutHeroSection{
+    flex:1;
+}
+
+.Methodology2LeftPicture{
+    order:1;
+}
+.Methodology2RightText{
+    order:2;
+}
+.Methodology1RightPicture,.Methodology2LeftPicture,.Methodology3RightPicture{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:809px){
+    .nav-toggle{
+        display:block;
+        
+    }
+    .navLinks.active{
+        width:250px;
+    }
+    .navLinks a{
+        font-size:30px;
+    
+    }
+    
+    .navLinks{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        background-color:black;
+        backdrop-filter:blur(50px);
+        top:0;
+        bottom:0;
+        right:0;
+        width:0px;
+        overflow:hidden;
+        transition:width 0.3s  ease;
+        height:100vh;
+        
+    }
+    .buttonContact{
+        display:none !important;
+    }
+    .heroSection{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .h1,.regular,.h2,.h3{
+        text-align: center;
+        
+        }
+    .wrap{
+        display:flex;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+   body{
+    gap:50px;
+   }
+   .servicesTitle{
+    max-width:  100%;
+    display:flex;
+    flex-direction: column;
+    
+   }
+   .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:repeat(2,1fr);
+    grid-gap: 20px; /* Adjust the gap between grid items */
+}
+
+
+.grid-content{
+    flex:1;
+    gap:20px;
+    padding:20px 60px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #131412   ;
+    border-radius: 20px;
+
+}
+.Methodology1,.Methodology2,.Methodology3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Methodology2 {
+    flex-direction: column; /* stack them vertically on smaller screens */
+}
+
+.Methodology2LeftPicture {
+    order: 2; /* Make the picture appear second */
+}
+
+.Methodology2RightText {
+    order: 1; /* Make the text appear first */
+}
+.ToolsSection{
+    display:flex;
+    flex-direction: column;
+    
+}
+.toolsTitle{
+    display:flex;
+    align-items: center;
+}
+.workGrid{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-content: center;
+    padding:0 50px;
+}
+.workGridCard{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.workGridButton{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactFormTitle,.contactFormHeader,.contactFormSection{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+#container,#contactForm{
+    display:flex;
+    width: 100%;
+}
+.contactFormSection{
+    padding:20px;
+    border-radius: 0;
+}
+
+.input-field-half{
+    width:50%;
+}
+.footerSection{
+    width: 100%;
+    gap:50px;
+}
+.footerLayout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.footerSocials{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerPages,.footerServices{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footerlink,.h5{
+    font-size:20px;
+    
+}
+#methodologySection{
+    padding:20px;
+}
+
+.section-column{
+    justify-content: center;
+    align-items: center;
+}
+.marketingTicker{
+    display:none;
+}
+.verticalTickers{
+    width: 100%;
+    
+}
+.clientsTickerTestimonialsCard{
+    margin: 0px 50px;
+}
+
 }

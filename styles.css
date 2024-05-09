@@ -159,7 +159,11 @@ body{
     display:flex;
     flex-direction: row;
     max-width: 1200px;
+    
     width: 100%;
+}
+#methodologySection{
+    padding:0 10px;
 }
 .section-row{
     display: flex;
@@ -366,11 +370,12 @@ body{
     font-size:20px;
 }
 .swiper-container {
-    width: 1400px;
+    width:100%;
+    max-width: 1400px;
     height: auto;
-    
+    overflow-x:hidden;
     white-space: nowrap; /* Prevent wrapping of logos */
-    overflow:hidden;
+    
     position:relative
 }
 .swiper-container::before{
@@ -398,6 +403,7 @@ body{
     position: relative;
     align-items: center;
     justify-content: center;
+    overflow:hidden;
     animation: scrollRightToLeft 25s linear infinite; /* Add animation for continuous scrolling */
 }
 
@@ -563,6 +569,7 @@ body{
     flex-direction:row;
     overflow:hidden;
     width:1400px;
+    
     position:relative;
     align-items: center;
     justify-content: start;    
@@ -669,7 +676,8 @@ body{
     display:flex;
     margin:0 100px;
     overflow:hidden;
-    width:1400px;
+    max-width:1400px;
+    width:100%;
     position:relative;
     
 }
@@ -726,8 +734,10 @@ form {
     padding: 8px;
     border-radius: 20px;
     background: white; 
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
+    width: 100%;
 }
+
 
 .input-flex-container {
     display: flex;
@@ -776,7 +786,7 @@ form {
     gap:10px;
 }
 .contactFormSubheader{
-    width:50%;
+    width:90%;
     text-align: center;
 }
 
@@ -784,7 +794,9 @@ form {
     display:flex;
     flex-direction: column;
     align-items: center;
-    width:1200px;
+    max-width:1200px;
+    padding:10px;
+    width:100%;
 }
 
 .footerLayout{
@@ -802,6 +814,7 @@ form {
 .rightsReserved{
     display:flex;
     flex:3;
+    margin:10px;
 }
 .policy{
     margin:10px;
@@ -836,9 +849,7 @@ form {
     color: #A0E00D;
     text-shadow: 0 0 0px rgba(160, 224, 13, 0.8); /* Enhanced glow on hover */
 }
-.aboutHeroSection{
-    flex:1;
-}
+
 
 .Methodology2LeftPicture{
     order:1;
@@ -851,17 +862,185 @@ form {
     align-items: center;
     justify-content: center;
 }
+.aboutHeroSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:50px;
+    padding: 20px;
+}
+.aboutTitle{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.resultsSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:30px;
+    order:2;
+}
+.resultsMaster{
+    display:flex;
+    max-width: 1200px;
 
+}
+.aboutHeroSectionParagraph{
+    max-width: 1200px;
+}
+
+.resultsTitle{
+    align-items: start;
+}
+.resultsGrid{
+    display:grid;
+    justify-content: start;
+    align-items: start;
+    grid-template-columns: repeat(2, minmax(200px, 500px));
+    gap:30px;
+    margin:0px;
+}
+.resultsImage{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    order:1;
+}
+.resultsImage img{
+    width: 100%;
+    min-width:350px;
+    max-width:850px;
+}
+.seoHeroSection{
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+    gap:20px;
+    max-width: 1400px;
+}
+.servicesGridTitle{
+    display:flex;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.servicesGridSection{
+    display:flex;
+    flex-direction: column;
+    max-width: 800px;
+    gap:50px;
+}
+.servicesGrid{
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px; /* Adjust gap between grid items as needed */
+    padding: 10px; /* Optional padding for the container */
+}
+.servicesGridCard{
+    background-color: #131412;
+    display:flex;
+    flex-direction: column;
+    max-width: ;
+    gap:10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.reasonsSection{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.reasonsListCard{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    max-width: 500px;
+    gap:20px;
+    text-align: center;
+}
+.reasonsList{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    gap:20px;
+}
+.reasonsTitle{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.implementSection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    gap:50px;
+}
+.implementTitle{
+    max-width: 800px;
+    text-align: center;
+}
+
+i {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Add glow effect */
+    
+  }
+  .seoHeroSection{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    text-align: center;
+  }
+  
 @media (max-width:809px){
+    .reasonsList{
+        display:flex;
+        flex-direction: column;
+    }
+    .resultsMaster{
+        display:flex;
+        flex-direction:column;
+    }
+    .resultsGrid{
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+    .resultsSection{
+        order:1;
+    }
+    .resultsImage{
+        order:2;
+    }
+    .resultsTitle{
+        align-items: center;
+    }
     .nav-toggle{
         display:block;
         
     }
     .navLinks.active{
-        width:250px;
+        width:50vw;
+        
     }
     .navLinks a{
-        font-size:30px;
+        font-size:20px;
     
     }
     
@@ -872,17 +1051,34 @@ form {
         align-items: center;
         justify-content: center;
         position:absolute;
-        background-color:black;
+        background-color:transparent;
         backdrop-filter:blur(50px);
+        width:0px;
         top:0;
         bottom:0;
         right:0;
-        width:0px;
         overflow:hidden;
         transition:width 0.3s  ease;
         height:100vh;
         
     }
+    .dropdown{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .dropdown-content{
+        position:relative;
+        display:block;
+        flex-direction:column;
+        
+        background-color:transparent;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .buttonContact{
         display:none !important;
     }
@@ -905,6 +1101,7 @@ form {
     
    body{
     gap:50px;
+    margin:10px;
    }
    .servicesTitle{
     max-width:  100%;
@@ -992,8 +1189,9 @@ form {
     border-radius: 0;
 }
 
-.input-field-half{
-    width:50%;
+.input-flex-container{
+    width:100%;
+    display:flex;
 }
 .footerSection{
     width: 100%;
@@ -1023,7 +1221,7 @@ form {
     
 }
 #methodologySection{
-    padding:20px;
+    margin:10px;
 }
 
 .section-column{
@@ -1034,7 +1232,8 @@ form {
     display:none;
 }
 .verticalTickers{
-    width: 100%;
+    
+
     
 }
 .clientsTickerTestimonialsCard{

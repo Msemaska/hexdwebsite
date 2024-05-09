@@ -79,7 +79,9 @@ body{
     color: #A0E00D;
     text-shadow: 0 0 0px rgba(160, 224, 13, 0.8); /* Enhanced glow on hover */
 }
-
+a{
+    text-decoration: none;
+}
 .button,.buttonContact{
     display: flex;
     flex-direction: row;

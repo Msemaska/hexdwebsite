@@ -1011,6 +1011,14 @@ i {
     gap:20px;
     text-align: center;
   }
+
+  .privacySection{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    max-width: 1200px;
+    white-space: pre-line;
+  }
   
 @media (max-width:809px){
     .reasonsList{

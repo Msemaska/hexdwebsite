@@ -387,7 +387,7 @@ a{
     content:"";
     width:150px;
     height:100%;
-    background: linear-gradient(to left, transparent,black);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0),black);
     z-index: 2;
 }
 .swiper-container::after{
@@ -397,7 +397,7 @@ a{
     content:"";
     width:150px;
     height:100%;
-    background: linear-gradient(to right, transparent,black);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0),black);
     z-index: 2;
 }
 .swiper-wrapper {
@@ -486,7 +486,7 @@ a{
     position:absolute;
     width:100%;
     height:50px;
-    background: linear-gradient(to bottom, transparent,black);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0),black);
     z-index: 2;
 }
 
@@ -498,7 +498,7 @@ a{
     position:absolute;
     width:100%;
     height:50px;
-    background: linear-gradient(to top, transparent,black);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0),black);
     z-index: 2;
 }
 
@@ -580,7 +580,7 @@ a{
 .marketingTickerCardsContainer::after{
     content:'';
     width:100px;
-    background:linear-gradient(to right, transparent, black);
+    background:linear-gradient(to right, rgba(255, 255, 255, 0), black);
     z-index:2;
     position:absolute;
     right:0px;
@@ -590,7 +590,7 @@ a{
 .marketingTickerCardsContainer::before{
     content:'';
     width:100px;
-    background:linear-gradient(to left, transparent, black);
+    background:linear-gradient(to left, rgba(255, 255, 255, 0), black);
     z-index:2;
     position:absolute;
     left:0px;
@@ -690,7 +690,7 @@ a{
     bottom:0;
     right:0;
     width:100px;
-    background: linear-gradient(to right, transparent, black);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
     z-index: 2;
 }
 .testimonialsMaster::before{
@@ -700,7 +700,7 @@ a{
     bottom:0;
     left:0;
     width:100px;
-    background: linear-gradient(to left, transparent, black);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
     z-index: 2;
 }
 @keyframes clientScroll{
@@ -1019,6 +1019,20 @@ i {
     max-width: 1200px;
     white-space: pre-line;
   }
+  .blogTitle{
+    text-align: center;
+    padding: 50px;
+    
+  }
+  #blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 2000px;
+}
+.blog-post img{
+    max-width: 500px;
+}
   
 @media (max-width:809px){
     .reasonsList{
@@ -1061,7 +1075,7 @@ i {
         align-items: center;
         justify-content: center;
         position:absolute;
-        background-color:transparent;
+        background-color:rgba(255, 255, 255, 0);
         backdrop-filter:blur(50px);
         width:0px;
         top:0;
@@ -1084,7 +1098,7 @@ i {
         display:block;
         flex-direction:column;
         
-        background-color:transparent;
+        background-color:rgba(255, 255, 255, 0);
         justify-content: center;
         align-items: center;
     }
